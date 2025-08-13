@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>FixMyTerminal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div id="navimg">
+        <img src="/images/logo-removebg-preview.png" alt="FixMyTerminal Logo" />
+      </div>
+      <ul id="navlinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="database.html">Database</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="btn-group">
+        <button id="themeToggle">🌙</button>
+        <button id="loginBtn">Login</button>
+      </div>
+    </div>
+
+    <section
+      class="flex flex-col md:flex-row justify-center items-start p-8 gap-6"
+    >
+      <!-- Left Panel -->
+      <div class="w-full md:w-1/2 bg-gray-800 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Paste Your Terminal Error ( Python )</h2>
+        <textarea
+          id="errorInput"
+          rows="8"
+          placeholder="Example: ModuleNotFoundError: No module named 'flask'"
+          class="w-full p-4 rounded-md text-black text-lg focus:outline-none"
+        ></textarea>
+
+        <label for="language" class="block mt-4 mb-2 text-lg"
+          >Select Language:</label
+        >
+        <select id="language" class="w-full p-2 text-black rounded-md">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="mr">Marathi</option>
+        </select>
+
+        <button
+          onclick="getFix()"
+          class="mt-4 w-full px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-md font-semibold"
+        >
+          Get Fix
+        </button>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="w-full md:w-1/2 space-y-6">
+        <!-- Solution Box -->
+        <div
+          id="solutionSection"
+          class="bg-gray-800 p-6 rounded-lg shadow-lg hidden fade-bounce"
+        >
+          <h2 class="text-2xl font-bold mb-4">Solution</h2>
+          <div id="solutionBox" class="text-lg space-y-4">
+            <p><strong>Why it happens:</strong></p>
+            <ul id="whyText" class="list-disc ml-6"></ul>
+
+            <p><strong>How to avoid:</strong></p>
+            <ul id="avoidText" class="list-disc ml-6"></ul>
+
+            <p><strong>Solution (Step by Step):</strong></p>
+            <ul id="solutionSteps" class="list-decimal ml-6"></ul>
+            <p><strong>Command:</strong> <code id="commandText"></code></p>
+
+            <button
+              onclick="copySolution()"
+              class="mt-2 px-4 py-2 bg-green-500 rounded hover:bg-green-600"
+            >
+              Copy Command
+            </button>
+          </div>
+        </div>
+
+       
+        <div
+          id="videoBox"
+          class="bg-gray-800 p-6 rounded-lg shadow-lg hidden fade-bounce"
+        >
+          <h3 class="text-xl font-semibold mb-4">Video Tutorial:</h3>
+          <iframe
+            id="videoFrame"
+            class="w-full h-64 rounded-md"
+            src=""
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+         <img src="/images/logo-removebg-preview.png" alt="">
+        </div>
+
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="database.html">Database contribution</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="database.html">Bug Reports</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              Email:
+              <a href="mailto:support@fixmyterminal.com"
+                >support@fixmyterminal.com</a
+              >
+            </li>
+            <li>Phone: +91-12345-67890</li>
+            <li>Location: India</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" title="Instagram"><img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt=""></a>
+            <a href="#" title="youtube"><img src="https://img.icons8.com/color/48/linkedin.png" alt=""></a>
+            <a href="#" title="linkedin"><img src="https://img.icons8.com/color/48/youtube-play.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 FixMyTerminal. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+

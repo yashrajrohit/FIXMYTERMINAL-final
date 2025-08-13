@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="learn.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div id="navimg"><img src="/images/logo-removebg-preview.png" alt="" /></div>
+      <ul id="navlinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="database.html">Database</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="btn-group">
+        <button id="themeToggle">🌙</button>
+        <button id="loginBtn">Login</button>
+      </div>
+    </div>
+    <div class="box1">
+  <div class="text-section">
+    <h1>What Is Terminal?</h1>
+    <p>
+      A terminal is a special window or program on your computer where you can type text commands to tell your computer what to do. 
+      Instead of clicking with a mouse, you type instructions. 
+      It’s like talking directly to your computer by typing commands.
+    </p>
+  </div>
+  <div class="image-section">
+    <img src="/images/terminal image.png" alt="Terminal Example">
+  </div>
+</div>
+<div class="box2">
+  <div class="image-section">
+    <video autoplay muted loop playsinline>
+      <source src="/videos/Developer.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="text-section">
+    <h1>What Are Terminal Errors?</h1>
+    <p>
+      Terminal errors are messages your computer shows when something goes wrong 
+      after you type a command in the terminal.  
+      They help you understand what went wrong — like missing files, wrong commands, or permission issues.  
+      Think of them as the computer's way of saying, "Hey, something’s not right!"
+    </p>
+  </div>
+</div>
+<section class="tips-section">
+  <h1>💡 Tips to Avoid Terminal Errors</h1>
+  <div class="tips-container">
+    <div class="tip-card">
+      <h2>1. Double Check Commands</h2>
+      <p>Read your command before pressing enter to avoid typos or wrong syntax.</p>
+    </div>
+    <div class="tip-card">
+      <h2>2. Know Your Paths</h2>
+      <p>Always check if you’re in the correct folder or directory before running commands.</p>
+    </div>
+    <div class="tip-card">
+      <h2>3. Read the Error Message</h2>
+      <p>Carefully read what the terminal says — it usually tells you the exact problem.</p>
+    </div>
+  </div>
+</section>
+<div class="quiz-section">
+  <h2>🧠 Test Your Knowledge</h2>
+  
+  <div class="quiz-question">
+    <p>1. What is a terminal?</p>
+    <button onclick="checkAnswer(this, true)">A tool to run commands</button>
+    <button onclick="checkAnswer(this, false)">A place to write documents</button>
+  </div>
+
+  <div class="quiz-question">
+    <p>2. Which of these is a syntax error?</p>
+    <button onclick="checkAnswer(this, true)">Misspelling a command</button>
+    <button onclick="checkAnswer(this, false)">Slow internet connection</button>
+  </div>
+
+  <div class="quiz-question">
+    <p>3. What command lists files in a directory?</p>
+    <button onclick="checkAnswer(this, true)">ls</button>
+    <button onclick="checkAnswer(this, false)">cd</button>
+  </div>
+    <div class="quiz-question">
+    <p>4. If you see Permission denied when running a command, what might fix it?</p>
+    <button onclick="checkAnswer(this, true)">Running with sudo (if safe)</button>
+    <button onclick="checkAnswer(this, false)">Rebooting the computer</button>
+  </div>
+    <div class="quiz-question">
+    <p>5. Which of these is a runtime error?</p>
+    <button onclick="checkAnswer(this, false)">Forgetting a semicolon in code</button>
+    <button onclick="checkAnswer(this, true)">Dividing a number by zero</button>
+  </div>
+
+  <div id="quiz-result"></div>
+</div>
+<br>
+<br>
+<footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+         <img src="/images/logo-removebg-preview.png" alt="">
+        </div>
+
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="database.html">Database contribution</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="database.html">Bug Reports</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              Email:
+              <a href="mailto:support@fixmyterminal.com"
+                >support@fixmyterminal.com</a
+              >
+            </li>
+            <li>Phone: +91-12345-67890</li>
+            <li>Location: India</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" title="Instagram"><img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt=""></a>
+            <a href="#" title="youtube"><img src="https://img.icons8.com/color/48/linkedin.png" alt=""></a>
+            <a href="#" title="linkedin"><img src="https://img.icons8.com/color/48/youtube-play.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 FixMyTerminal. All rights reserved.
+      </div>
+    </footer>
+
+
+
+
+
+ 
+
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const body = document.body;
+
+      // Load saved theme from localStorage
+      const currentTheme = localStorage.getItem("theme");
+      if (currentTheme === "dark") {
+        body.classList.add("dark-theme");
+        themeToggle.textContent = "☀️";
+      }
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
+
+        // Save preference
+        if (body.classList.contains("dark-theme")) {
+          localStorage.setItem("theme", "dark");
+          themeToggle.textContent = "🌙";
+        } else {
+          localStorage.setItem("theme", "light");
+          themeToggle.textContent = "☀️";
+        }
+      });
+
+      let score = 0;
+let answered = 0;
+
+function checkAnswer(button, isCorrect) {
+  if (isCorrect) {
+    score++;
+    button.style.background = "green";
+  } else {
+    button.style.background = "red";
+  }
+  answered++;
+
+  if (answered === 5) {
+    document.getElementById("quiz-result").innerHTML = 
+      `You got ${score} out of 5 correct! 🎉`;
+  }
+}
+
+    </script>
+  </body>
+</html>
